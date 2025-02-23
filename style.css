@@ -90,31 +90,37 @@ header {
   );
   transform: scale(1.03);
 }
+
 #menu-icon {
   font-size: 2rem;
   display: none;
 }
+
 section {
   min-height: 100vh;
   padding: 8rem 12%;
   width: 100%;
   position: relative;
 }
+
 .about {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .about .about-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10rem;
 }
+
 .about img {
   width: 30vw;
   border-radius: 50%;
 }
+
 .info-box {
   display: flex;
   flex-direction: column;
@@ -123,15 +129,18 @@ section {
   justify-content: center;
   gap: 1.5rem;
 }
+
 .info-box h3 {
   font-size: 1.8rem;
   font-weight: 500;
   opacity: 0.8;
 }
+
 .info-box h1 {
   font-size: 4rem;
   font-weight: 600;
 }
+
 .info-box span {
   font-size: 2rem;
   color: transparent;
@@ -142,10 +151,12 @@ section {
     rgb(0, 157, 255)
   );
 }
+
 .btn-group {
   display: flex;
   gap: 1rem;
 }
+
 .btn {
   border-radius: 3rem;
   padding: 0.5rem 1.5rem;
@@ -155,43 +166,52 @@ section {
   text-wrap: nowrap;
   transition: 0.2s ease-in-out;
 }
+
 .btn:hover {
   background-color: black;
   color: white;
 }
+
 .socials {
   display: flex;
   gap: 2rem;
 }
+
 .socials i {
   font-size: 2.5rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
+
 .socials i:hover {
   transform: scale(1.1);
 }
+
 .section-title {
   text-align: center;
   font-size: 4rem;
   font-weight: 600;
   margin-bottom: 3rem;
 }
+
 .experience-info {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5rem;
 }
+
 .experience img {
   width: 24vw;
   border-radius: 3rem;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+
 .grid-card {
   border: 2px solid;
   border-radius: 3rem;
@@ -203,15 +223,18 @@ section {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
+
 .grid-card:hover {
   transform: scale(1.02);
   background-color: black;
   color: white;
 }
+
 .grid-card i {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+
 .grid-card span {
   font-size: 1.5rem;
   font-weight: 500;
@@ -223,12 +246,15 @@ section {
   background-clip: text;
   color: transparent;
 }
+
 ::-webkit-scrollbar {
   width: 20px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: rgb(219, 219, 219);
 }
+
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(
     to bottom,
@@ -236,47 +262,42 @@ section {
     rgb(0, 157, 255)
   );
 }
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
 }
+
 .project-card {
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 1.5rem;
+  gap: 1rem;
   border: 2px solid black;
   border-radius: 3rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+
 .project-card:hover {
-  background-color: black;
-  color: white;
   transform: translateY(-10px) scale(1.02);
 }
 
 .project-card img {
   width: 20vw;
-  border: 1rem;
+  height: 15vw;
+  border-radius: 1rem;
 }
-.project-card:hover .btn {
-  border: 2px solid white;
-  color: white;
-}
-.project-card:hover .btn:hover {
-  border: 2px solid white;
-  background-color: white;
-  color: black;
-}
+
 .project-card {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
+
 .input-box {
   display: flex;
   flex-direction: column;
@@ -291,12 +312,13 @@ section {
   border-radius: 3rem;
   border: 2px solid black;
   padding: 2rem 8rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .input-box input::placeholder {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
+
 .input {
   position: relative;
 }
@@ -308,6 +330,7 @@ section {
   left: 10px;
   transform: translate(50%, -50%);
 }
+
 footer {
   bottom: 0;
   left: 0;
@@ -363,99 +386,140 @@ footer ul li a:hover::before {
   color: #555;
 }
 
-@media (max-width: 120px) {
+.visit-btn a {
+  color: white;
+}
+
+.btn a {
+  color: black;
+}
+.btn a:hover {
+  color: white;
+}
+/* Afficher l'icône du menu sur mobile */
+#menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Cacher les liens de navigation sur mobile */
+@media (max-width: 768px) {
   header {
-    padding: 1rem 2rem;
     gap: 2rem;
   }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #menu-icon {
+    display: block;
+    font-size: 2rem;
+    color: white;
+  }
+
   .about .about-container {
-    gap: 3rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about img {
+    width: 50vw;
+  }
+
+  .info-box h1 {
+    font-size: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    text-align: center;
   }
   .experience-info {
     flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
+
+  .experience img {
+    width: 80vw; /* Ajuste l'image pour qu'elle occupe plus d'espace en petit écran */
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Passer à une seule colonne pour les petits écrans */
+    gap: 1.5rem; /* Ajuste l'espace entre les cartes */
+  }
+
+  .project-card img {
+    width: 100%; /* L'image occupe 100% de la largeur de la carte */
+    height: auto; /* La hauteur est automatiquement ajustée */
+  }
+  .input-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem; /* Ajoute un peu de padding pour espacer les éléments */
+  }
+
   .input-box input {
-    padding: 2rem 5rem;
-    font-size: 2.5rem;
+    width: 80%; /* Utilisez un pourcentage pour que l'input s'ajuste à la taille de l'écran */
+    font-size: 1.5rem; /* Réduit légèrement la taille du texte sur mobile */
   }
-  .input-box input::placeholder {
-    font-size: 2.5rem;
+  section {
+    padding: 6rem 5%; /* Réduire les marges et espacements des sections */
   }
-  .input-box i {
-    font-size: 2.5rem;
+
+  .about .about-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about img {
+    width: 50vw; /* Ajuste la taille de l'image pour les petits écrans */
+  }
+
+  .grid-card {
+    padding: 2rem; /* Réduit les marges et ajustements de la carte */
+  }
+
+  .grid-card i {
+    font-size: 1.2rem; /* Ajuste la taille de l'icône pour les petits écrans */
+  }
+
+  .grid-card span {
+    font-size: 1.2rem; /* Réduit la taille du texte dans la carte */
   }
 }
-@media (max-width: 768) {
-  header {
-    gap: 1rem;
-    padding: 1rem 1rem;
-  }
-  header .logo {
-    font-size: 1rem;
-  }
-  header .visit-btn {
-    display: none;
-  }
-  .about-container {
-    flex-direction: column;
-  }
-  .input-box input::placeholder {
-    font-size: 1.5rem;
-  }
-  .input-box i {
-    display: none;
-  }
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .experience-info img {
-    width: 70vw;
-  }
+
+img {
+  max-width: 100%;
+  height: auto;
 }
-@media (max-width: 600) {
-  header #menu-icon {
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    margin-top: 1rem;
-    width: 100%;
-    padding: 1rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background: rgb(0, 0, 0.9);
-    border-radius: 3rem;
-    display: none;
-  }
-  .nav-links li {
-    margin: top 1.5rem;
-    padding: 1rem;
-  }
-  .nav-links.active {
-    display: block;
-  }
-  header {
-    padding: 1rem 5rem;
-    gap: 8rem;
-  }
-  header .log {
-    font-size: 1.5rem;
-  }
-  .about-container img {
-    width: 80vw;
-  }
-  .info-box input {
-    padding: 0.5rem 3rem;
-    width: 80%;
-    font-size: 1.5rem;
-  }
-  .input-box input::placeholder {
-    font-size: 1.5rem;
-  }
-  footer ul {
-    gap: 1rem;
-  }
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
 }

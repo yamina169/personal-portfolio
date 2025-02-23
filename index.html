@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -20,11 +21,13 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <i class="fa-solid fa-bars" id="menu-icon"></i>
-      <button class="visit-btn">Visit Github</button>
+      <button class="visit-btn">
+        <a href="https://github.com/yamina169">Visit Github</a>
+      </button>
     </header>
     <section id="about" class="about">
       <div class="about-container">
-        <img src="images/help ukhti.jpeg" alt="Profile Picture" />
+        <img src="assests/images/help ukhti.jpeg" alt="Profile Picture" />
         <div class="info-box">
           <div class="text">
             <h3>Hi, I'm</h3>
@@ -32,7 +35,9 @@
             <span>Web Developer</span>
           </div>
           <div class="btn-group">
-            <div class="btn" download>Download CV</div>
+            <div class="btn" download>
+              <a href="assests/files/cv.pdf" download>Download CV</a>
+            </div>
             <div class="btn">Contact</div>
           </div>
           <div class="socials">
@@ -80,7 +85,7 @@
             </p>
           </div>
         </div>
-        <img src="images/help ukhti.jpeg" alt="Profile Picture" />
+        <img src="assests/images/help ukhti.jpeg" alt="Profile Picture" />
       </div>
     </section>
     <section id="projects" class="projects">
@@ -88,7 +93,7 @@
       <div class="projects-grid">
         <div class="project-card">
           <img
-            src="images/Dark Theme Website Design for Software Development.jpeg"
+            src="assests/images/Dark Theme Website Design for Software Development.jpeg"
             alt=""
           />
           <h3>Project x</h3>
@@ -103,7 +108,7 @@
         </div>
         <div class="project-card">
           <img
-            src="images/Digimax - Digital Marketing Agency Elementor Template Kit.jpeg"
+            src="assests/images/Digimax - Digital Marketing Agency Elementor Template Kit.jpeg"
             alt=""
           />
           <h3>Project x</h3>
@@ -122,10 +127,20 @@
       <div class="input-box">
         <h2 class="section-title">Contact Me</h2>
         <div class="input">
-          <input type="text" placeholder="email" />
+          <input
+            type="text"
+            disabled
+            placeholder="rezguiyamina1692001@gmail.com"
+          />
           <i class="fa-regular fa-envelope"></i>
         </div>
-        <div class="btn">Submit</div>
+        <div class="btn">
+          <a
+            href="mailto:rezguiyamina1692001@gmail.com?subject=Contact%20from%20Portfolio"
+            target="_blank"
+            >Contact</a
+          >
+        </div>
       </div>
     </section>
     <footer>
